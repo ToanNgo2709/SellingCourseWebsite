@@ -1,0 +1,13 @@
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\bin\Debug\net5.0\SellingCourseWebsite.DAL.dll.config
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\bin\Debug\net5.0\SellingCourseWebsite.DAL.deps.json
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\bin\Debug\net5.0\SellingCourseWebsite.DAL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\bin\Debug\net5.0\ref\SellingCourseWebsite.DAL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\bin\Debug\net5.0\SellingCourseWebsite.DAL.pdb
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\SellingCourseWebsite.DAL.csproj.AssemblyReference.cache
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\SellingCourseWebsite.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\SellingCourseWebsite.DAL.AssemblyInfoInputs.cache
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\SellingCourseWebsite.DAL.AssemblyInfo.cs
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\SellingCourseWebsite.DAL.csproj.CoreCompileInputs.cache
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\SellingCourseWebsite.DAL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\ref\SellingCourseWebsite.DAL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.DAL\obj\Debug\net5.0\SellingCourseWebsite.DAL.pdb
