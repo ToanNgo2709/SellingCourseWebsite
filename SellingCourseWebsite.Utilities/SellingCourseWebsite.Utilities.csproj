@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SellingCourseWebsite.DAL\SellingCourseWebsite.DAL.csproj" />
+    <Folder Include="Crypto\" />
   </ItemGroup>
 
 </Project>
