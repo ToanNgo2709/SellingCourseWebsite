@@ -1915,6 +1915,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "SellingCourseWebsite.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SellingCourseWebsite.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SellingCourseWebsite.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SellingCourseWebsite.BLL.dll": {}
+        }
+      },
       "SellingCourseWebsite.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6638,6 +6651,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "SellingCourseWebsite.BLL/1.0.0": {
+      "type": "project",
+      "path": "../SellingCourseWebsite.BLL/SellingCourseWebsite.BLL.csproj",
+      "msbuildProject": "../SellingCourseWebsite.BLL/SellingCourseWebsite.BLL.csproj"
+    },
     "SellingCourseWebsite.DAL/1.0.0": {
       "type": "project",
       "path": "../SellingCourseWebsite.DAL/SellingCourseWebsite.DAL.csproj",
@@ -6647,6 +6665,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.6",
+      "SellingCourseWebsite.BLL >= 1.0.0",
       "SellingCourseWebsite.DAL >= 1.0.0",
       "bootstrap >= 5.0.1",
       "jQuery >= 3.6.0"
@@ -6684,6 +6703,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\Project\\C#\\SellingCourseWebsite\\SellingCourseWebsite.BLL\\SellingCourseWebsite.BLL.csproj": {
+              "projectPath": "D:\\Project\\C#\\SellingCourseWebsite\\SellingCourseWebsite.BLL\\SellingCourseWebsite.BLL.csproj"
+            },
             "D:\\Project\\C#\\SellingCourseWebsite\\SellingCourseWebsite.DAL\\SellingCourseWebsite.DAL.csproj": {
               "projectPath": "D:\\Project\\C#\\SellingCourseWebsite\\SellingCourseWebsite.DAL\\SellingCourseWebsite.DAL.csproj"
             }

@@ -14,6 +14,17 @@ namespace SellingCourseWebsite.BLL.Dao
     {
         CourseSellDbContext context = CourseSellDbContext.GetInstance();
 
+        private UserInfoDAORequest() { }
+        private static UserInfoDAORequest _instance;
+        public static UserInfoDAORequest GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new UserInfoDAORequest();
+            }
+            return _instance;
+        }
+
         public int Add(UserInfoViewModel type)
         {
             UserInfo newUser = new()
