@@ -386,3 +386,4 @@ D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\obj\Debug\net5.0\Selling
 D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\obj\Debug\net5.0\ref\SellingCourseWebsite.dll
 D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\obj\Debug\net5.0\SellingCourseWebsite.pdb
 D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\obj\Debug\net5.0\SellingCourseWebsite.genruntimeconfig.cache
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\obj\Debug\net5.0\Razor\Views\Shared\_LayoutClient.cshtml.g.cs

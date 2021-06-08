@@ -35,6 +35,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.6",
           "SellingCourseWebsite.DAL": "1.0.0",
+          "bootstrap": "5.0.1",
+          "jQuery": "3.6.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -324,6 +326,8 @@
           "SellingCourseWebsite.dll": {}
         }
       },
+      "bootstrap/5.0.1": {},
+      "jQuery/3.6.0": {},
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.6": {
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "5.0.6",
@@ -3186,6 +3190,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "bootstrap/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Pynev+4iZ5wOhOnN6nnx2Q+GuGUXg+GksQHU2FqdWKFAX66w7IxYchoiAIJBzdnoNrBRZkMJjoL09UK1+13VEA==",
+      "path": "bootstrap/5.0.1",
+      "hashPath": "bootstrap.5.0.1.nupkg.sha512"
+    },
+    "jQuery/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sSzCTDWn15waSMjDrP21jjgG1j1pwISLaKiVCClwU4XGAmuZt+FScLkdyRvh9ppoIxAW/tJtJBYei+3CAwFQ7g==",
+      "path": "jquery/3.6.0",
+      "hashPath": "jquery.3.6.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.6": {
       "type": "package",

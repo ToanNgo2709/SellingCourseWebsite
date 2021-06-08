@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "W7MeShQvdilXGFYK7agrQXZLJZfYJazZj4q1+/KF/F8vlh7tyQuLNez2p4X9JN91OUoEPn9ov5OJ8qCH5JbxXw==",
+  "dgSpecHash": "/Aar8wY1ffaC5ozCt9de5cZwwA6cviua0YGSDsOY+WrAi6MlChk+D+hHiTbSbKnE+Yb4MEbl4nueEDxeew2y1w==",
   "success": true,
   "projectFilePath": "D:\\Project\\C#\\SellingCourseWebsite\\SellingCourseWebsite\\SellingCourseWebsite.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ngoto\\.nuget\\packages\\bootstrap\\5.0.1\\bootstrap.5.0.1.nupkg.sha512",
+    "C:\\Users\\ngoto\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
     "C:\\Users\\ngoto\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.6\\microsoft.aspnetcore.mvc.razor.extensions.5.0.6.nupkg.sha512",
     "C:\\Users\\ngoto\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.6\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.6.nupkg.sha512",
     "C:\\Users\\ngoto\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.6\\microsoft.aspnetcore.razor.language.5.0.6.nupkg.sha512",
