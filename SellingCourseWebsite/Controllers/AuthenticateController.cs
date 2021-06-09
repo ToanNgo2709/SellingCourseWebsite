@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SellingCourseWebsite.BLL.Dao;
 using SellingCourseWebsite.BLL.ViewModel;
+using SellingCourseWebsite.Utilities.Crypto;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,10 +27,43 @@ namespace SellingCourseWebsite.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult LoginDb()
         {
-            return Json("result");
+            string username = Request.Form["username"];
+            string password = Request.Form["password"];
+            var item = uiRequest.GetByUsername(username);
+            if (item != null)
+            {
+                string hashed = PasswordSecurity.DecryptString(item.HashPassword);
+                if (password.Equals(hashed))
+                {
+                    TempData["id"] = item.Id;
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    TempData["alert"] = "Password wrong, try again";
+                    return RedirectToAction("Login");
+                }
+            }
+            else
+            {
+                TempData["alert"] = "this account is not exist, please sign up";
+                return RedirectToAction("Login");
+            }
         }
+
+        public bool checkUsername(string username)
+        {
+            var item = uiRequest.GetByUsername(username);
+            if (item != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
 
         /**
          * ======================================================
@@ -41,31 +75,60 @@ namespace SellingCourseWebsite.Controllers
             return View();
         }
 
-        public IActionResult RegisterDb(UserInfoViewModel user)
+        [HttpPost]
+        public IActionResult RegisterDb()
         {
-            const string SessionAlert = "_Alert";
-            if (!CheckExistUsername(user))
+            string username = Request.Form["username"];
+            string password = Request.Form["password"];
+            string rePassword = Request.Form["re_password"];
+            string email = Request.Form["email"];
+            if (!CheckExistUsername(username, email))
             {
-                uiRequest.Add(user);
-                return RedirectToAction();
+                if (CheckPasswordMatch(password, rePassword))
+                {
+                    string hashed = PasswordSecurity.EncryptString(password);
+                    UserInfoViewModel newUser = new UserInfoViewModel()
+                    {
+                        Username = username,
+                        HashPassword = hashed,
+                        Email = email,
+                        UserTypeId = 2,
+                        Active = true
+                    };
+
+                    uiRequest.Add(newUser);
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    return Json("Password not match");
+                }
+                
             }
             else
             {
-
-                HttpContext.Session.SetString(SessionAlert,"Username existed, please choose another");
+                return Json("User Exist");
             }            
-
-            return RedirectToAction();
         }
 
-        public bool CheckExistUsername(UserInfoViewModel user)
+        public bool CheckExistUsername(string username, string email)
         {
-            var item = uiRequest.GetById(user.Id);
+            var item = uiRequest.GetByUsernameAndEmail(username, email);
             if (item != null)
             {
                 return true;
             }
             return false;
+        }
+
+        public bool CheckPasswordMatch(string password, string rePassword)
+        {
+            if (password.Equals(rePassword))
+            {
+                return true;
+            }
+            return false;
+
         }
 
         public bool CheckNullField(UserInfoViewModel user)

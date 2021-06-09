@@ -76,6 +76,52 @@ namespace SellingCourseWebsite.BLL.Dao
             return list;
         }
 
+        public UserInfoViewModel GetByUsernameAndEmail(string username,string email)
+        {
+            var item = context.UserInfos
+                .Where(u => u.Username.Equals(username) || u.Email.Equals(email))
+                .Select(u => new UserInfoViewModel
+                {
+                    Id = u.Id,
+                    Username = u.Username,
+                    HashPassword = u.HashPassword,
+                    FullName = u.FullName,
+                    Dob = u.Dob,
+                    Email = u.Email,
+                    Phone = u.Phone,
+                    Address = u.Address,
+                    UserType = u.UserType,
+                    UserTypeId = u.UserTypeId,
+                    Active = u.Active,
+                    AvatarImgPath = u.AvatarImgPath
+                })
+                .FirstOrDefault();
+            return item;
+        }
+
+        public UserInfoViewModel GetByUsername(string username)
+        {
+            var item = context.UserInfos
+                .Where(u => u.Username.Equals(username))
+                .Select(u => new UserInfoViewModel
+                {
+                    Id = u.Id,
+                    Username = u.Username,
+                    HashPassword = u.HashPassword,
+                    FullName = u.FullName,
+                    Dob = u.Dob,
+                    Email = u.Email,
+                    Phone = u.Phone,
+                    Address = u.Address,
+                    UserType = u.UserType,
+                    UserTypeId = u.UserTypeId,
+                    Active = u.Active,
+                    AvatarImgPath = u.AvatarImgPath
+                })
+                .FirstOrDefault();
+            return item;
+        }
+
         public UserInfoViewModel GetById(int id)
         {
             var item = context.UserInfos

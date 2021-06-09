@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SellingCourseWebsite.DAL.Entities
 {
-    [Table("UserType")]
+    [Table("UserInfo")]
     public class UserInfo
     {
         [Key]

@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_layoutAuthenticate.cshtml";
+}
+
+<div class="container">
+    <div class="myCard">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="myLeftCtn">
+                    <form action="@Url.Action("LoginDb")" method="post" class="myForm text-center">
+
+                        <header>Welcome Back</header>
+
+                        <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input class="myInput" type="text" placeholder="Username" id="username" name="username" required>
+                            <div class="invalid-feedback">Please fill out this field</div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-lock"></i>
+                            <input class="myInput" type="password" placeholder="Password" id="password" name="password" required>
+                            <div class="invalid-feedback">Please fill out this field</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input id="check1" name="check1" type="checkbox" required />
+                                <small> Remember me </small>
+                            </label>
+                        </div>
+
+                        <input type="submit" class="butt" value="Login">
+                        <div class="myFormFooter">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="">Return to HomePage</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="myRightCtn">
+                    <div class="box">
+                        <header>Hello World!</header>
+                    </div>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500
+                    </p>
+                    <input type="button" class="butt_out" value="Learn More">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@if (TempData["alert"] != null)
+{
+    <script type="text/javascript">
+        alert(@TempData["alert"]);
+    </script>
+}
+

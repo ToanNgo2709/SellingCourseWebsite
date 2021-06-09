@@ -1,0 +1,16 @@
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\bin\Debug\net5.0\SellingCourseWebsite.BLL.deps.json
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\bin\Debug\net5.0\SellingCourseWebsite.BLL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\bin\Debug\net5.0\ref\SellingCourseWebsite.BLL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\bin\Debug\net5.0\SellingCourseWebsite.BLL.pdb
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\bin\Debug\net5.0\SellingCourseWebsite.DAL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\bin\Debug\net5.0\SellingCourseWebsite.DAL.pdb
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\bin\Debug\net5.0\SellingCourseWebsite.DAL.dll.config
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.csproj.AssemblyReference.cache
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.AssemblyInfoInputs.cache
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.AssemblyInfo.cs
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.csproj.CoreCompileInputs.cache
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.csproj.CopyComplete
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\ref\SellingCourseWebsite.BLL.dll
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite.BLL\obj\Debug\net5.0\SellingCourseWebsite.BLL.pdb
