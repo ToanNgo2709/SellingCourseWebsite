@@ -155,4 +155,25 @@ body {
             color: red;
         }
 
+.myFormFooterRegister {
+    margin-top: 10px;
+    font-size: 14px;
+}
 
+    .myFormFooterRegister a {
+        text-decoration: none;
+        font-style: italic;
+        font-weight: 600;
+    }
+
+        .myFormFooterRegister a:hover {
+            text-decoration: none;
+            transition: .7s;
+            color: red;
+        }
+
+
+#alertModalLabel {
+    color: red;
+    font-weight: 700;
+}

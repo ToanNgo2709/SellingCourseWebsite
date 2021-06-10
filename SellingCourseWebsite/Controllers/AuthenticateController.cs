@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SellingCourseWebsite.BLL.Dao;
 using SellingCourseWebsite.BLL.ViewModel;
 using SellingCourseWebsite.Utilities.Crypto;
+using SellingCourseWebsite.Utilities.Email;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,6 +25,8 @@ namespace SellingCourseWebsite.Controllers
 
         public IActionResult Login()
         {
+            ViewBag.alert = null;
+            ViewBag.alert = TempData["alert"];
             return View();
         }
 
@@ -72,6 +75,8 @@ namespace SellingCourseWebsite.Controllers
 
         public IActionResult Register()
         {
+            ViewBag.alert = null;
+            ViewBag.alert = TempData["RegisterAlert"];
             return View();
         }
 
@@ -97,17 +102,20 @@ namespace SellingCourseWebsite.Controllers
                     };
 
                     uiRequest.Add(newUser);
+
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    return Json("Password not match");
+                    TempData["RegisterAlert"] = "The Password and Re-Password not match";
+                    return RedirectToAction("Register");
                 }
                 
             }
             else
             {
-                return Json("User Exist");
+                TempData["RegisterAlert"] = "The username or email exist, Please try again";
+                return RedirectToAction("Register");
             }            
         }
 
@@ -169,12 +177,33 @@ namespace SellingCourseWebsite.Controllers
         **/
         public IActionResult ForgotPassword()
         {
+            ViewBag.alert = null;
+            ViewBag.alert = TempData["fpAlert"];
             return View();
         }
 
         public IActionResult ForgotPasswordFeature()
         {
-            return RedirectToAction();
+            string username = Request.Form["username"];
+            string email = Request.Form["email"];
+            if (CheckExistUsername(username, email))
+            {
+                var item = uiRequest.GetByUsername(username);
+                string password = PasswordSecurity.DecryptString(item.HashPassword);
+                string subject = "KrakenForce Forgot Password";
+                string body = $"Your password is {password}";
+
+                EmailFeature.SendEmail(email, subject, body );
+
+                TempData["fpAlert"] = "Sent Email, Check your email to get Password";
+                return RedirectToAction("ForgotPassword");
+            }
+            else
+            {
+                TempData["fpAlert"] = "Account not Exist, please register";
+                return RedirectToAction("ForgotPassword");
+            }
+            
         }
 
 
