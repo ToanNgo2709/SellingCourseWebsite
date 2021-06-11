@@ -440,3 +440,4 @@ D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\bin\Debug\net5.0\System.
 D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\bin\Debug\net5.0\SellingCourseWebsite.Utilities.dll
 D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\bin\Debug\net5.0\SellingCourseWebsite.Utilities.pdb
 D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\obj\Debug\net5.0\Razor\Views\Authenticate\ForgotPassword.cshtml.g.cs
+D:\Project\C#\SellingCourseWebsite\SellingCourseWebsite\obj\Debug\net5.0\Razor\Views\Authenticate\ChangePassword.cshtml.g.cs

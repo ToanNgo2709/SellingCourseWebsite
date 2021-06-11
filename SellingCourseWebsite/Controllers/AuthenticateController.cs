@@ -41,7 +41,9 @@ namespace SellingCourseWebsite.Controllers
                 string hashed = PasswordSecurity.DecryptString(item.HashPassword);
                 if (password.Equals(hashed))
                 {
-                    TempData["id"] = item.Id;
+                    HttpContext.Session.SetInt32("id", item.Id);
+                    HttpContext.Session.SetString("username", item.Username);
+
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -110,13 +112,13 @@ namespace SellingCourseWebsite.Controllers
                     TempData["RegisterAlert"] = "The Password and Re-Password not match";
                     return RedirectToAction("Register");
                 }
-                
+
             }
             else
             {
                 TempData["RegisterAlert"] = "The username or email exist, Please try again";
                 return RedirectToAction("Register");
-            }            
+            }
         }
 
         public bool CheckExistUsername(string username, string email)
@@ -153,6 +155,16 @@ namespace SellingCourseWebsite.Controllers
                 }
             }
             return false;
+        }
+
+        /**
+         * ======================================================
+         * LOGOUT
+        **/
+        public ActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
 
         //Upload Image - Need to check
@@ -193,7 +205,7 @@ namespace SellingCourseWebsite.Controllers
                 string subject = "KrakenForce Forgot Password";
                 string body = $"Your password is {password}";
 
-                EmailFeature.SendEmail(email, subject, body );
+                EmailFeature.SendEmail(email, subject, body);
 
                 TempData["fpAlert"] = "Sent Email, Check your email to get Password";
                 return RedirectToAction("ForgotPassword");
@@ -203,7 +215,7 @@ namespace SellingCourseWebsite.Controllers
                 TempData["fpAlert"] = "Account not Exist, please register";
                 return RedirectToAction("ForgotPassword");
             }
-            
+
         }
 
 
@@ -213,14 +225,46 @@ namespace SellingCourseWebsite.Controllers
         **/
         public IActionResult ChangePassword()
         {
+
+            ViewBag.alert = null;
+            ViewBag.alert = TempData["cpAlert"];
             return View();
         }
 
         public IActionResult ChangePasswordFeature()
         {
-            return View();
+            var id = HttpContext.Session.GetInt32("id");
+
+            var user = uiRequest.GetById((int)id);
+            string password = PasswordSecurity.DecryptString(user.HashPassword);
+            string oldPassword = Request.Form["oldPassword"];
+            string newPassword = Request.Form["newPassword"];
+            string rePassword = Request.Form["rePassword"];
+            if (oldPassword.Equals(password))
+            {
+                if (CheckPasswordMatch(newPassword, rePassword))
+                {
+                    user.HashPassword = PasswordSecurity.EncryptString(newPassword);
+                    uiRequest.Update(user);
+
+                    TempData["cpAlert"] = "Change Password succesfully";
+                    return RedirectToAction("ChangePassword");
+                }
+                else
+                {
+                    TempData["cpAlert"] = "New Password not match, try again";
+                    return RedirectToAction("ChangePassword");
+                }
+            }
+            else
+            {
+                TempData["cpAlert"] = "Wrong Password, please try again";
+                return RedirectToAction("ChangePassword");
+            }
+
         }
 
-
     }
+
+
 }
