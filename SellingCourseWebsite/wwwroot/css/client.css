@@ -1,7 +1,276 @@
-﻿.banner{
-    position:relative;
-    background-image: url(../image/banner.jpg);
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+﻿/* HEADER TOP*/
+.header-top {
+    position: relative;
+    font-size: 13px;
+    padding: 3px;
+    background: #24b852;
+    color: white;
+    height: 40px;
 }
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+}
+
+.left-header {
+    left: 100px;
+}
+
+    .left-header a {
+        color: white;
+    }
+
+        .left-header a:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+
+#label-msg {
+    padding: 5px;
+    background: orange;
+}
+
+.right-header .header-link {
+    margin-left: 100px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.header-link .hlink {
+    border-left: 1px solid #fff;
+    padding: 0px 10px;
+    color: white;
+}
+
+    .header-link .hlink:hover {
+        text-decoration: none;
+        color: red;
+    }
+
+/* HEADER CENTER*/
+.header-center {
+    background: #fff;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+#logo {
+    margin-left: 100px;
+}
+
+    #logo a {
+        color: black;
+    }
+
+        #logo a:hover {
+            text-decoration: none;
+        }
+
+.nav-bar ul {
+    float: none;
+    list-style-type: none;
+    display: flex;
+    margin: 10px;
+}
+
+    .nav-bar ul li {
+        font-size: 13px;
+        margin: 5px;
+        padding: 5px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 5px;
+        color: black;
+    }
+
+        .nav-bar ul li:hover {
+            background: green;
+            transition: .5s;
+        }
+
+
+        .nav-bar ul li a {
+            color: black;
+        }
+
+            .nav-bar ul li a:hover {
+                text-decoration: none;
+                color: white;
+            }
+
+.category-nav {
+    background: #24b852;
+}
+
+    .category-nav li a {
+        color: white;
+        font-weight: 700;
+    }
+
+        .category-nav li a:hover {
+            background: #09491e;
+            transition: .3s;
+        }
+
+.slider-container {
+    margin: 0px 30px
+}
+
+/*MAIN CONTAINER*/
+.main-container {
+    margin: 0px 30px
+}
+
+/*SLIDE CONTAINER*/
+
+
+.slide-section img {
+    height: auto;
+    max-width: 100%;
+}
+
+.searchSection {
+    background: #24b852;
+    padding: 10px;
+    display: flex;
+}
+
+#search-input {
+    width: 80%;
+    border-radius: 5px;
+}
+
+#search-button {
+    border-radius: 5px;
+    margin-left: -29px;
+    background: transparent;
+}
+
+.search-icon:hover {
+    color: green;
+    transition: .3s;
+}
+
+/*TOP FOOTER*/
+.top-footer {
+    background: #23323F;
+    color: white;
+    padding: 20px;
+}
+
+.tft-item {
+    display: flex;
+    flex-direction: column;
+}
+
+    .tft-item button {
+        background: #24b852;
+        border-radius: 5px;
+        width: 50%;
+        color: white;
+        border: none;
+    }
+
+    .tft-item ul {
+        list-style-type: none;
+    }
+
+    .tft-item.qa ul {
+        list-style-type: disc;
+    }
+
+        .tft-item.qa ul li {
+            margin-left: -30px;
+        }
+
+            .tft-item.qa ul li a {
+                color: white;
+            }
+
+    .tft-item.lp li {
+        padding: 5px;
+    }
+
+    .tft-item.lp a:hover {
+        text-decoration: none;
+        color: #24b852;
+        transition: .3s;
+    }
+
+.ft-news-body {
+    display: flex;
+}
+
+    .ft-news-body img {
+        width: 60px;
+        height: 40px;
+        margin-left: -40px;
+    }
+
+    .ft-news-body p {
+        margin-left: 10px;
+        color: white;
+        font-size: 14px;
+    }
+
+.tft-item.lp p:hover {
+    text-decoration: none;
+    color: #24b852;
+    transition: .3s;
+}
+
+
+.info-reg-body {
+    background: white;
+    width: 350px;
+    height: 250px;
+}
+
+.reg-body-img {
+    height: 50%;
+}
+
+
+    .reg-body-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+.body-form {
+    margin: 10px;
+}
+
+    .body-form input, a {
+        margin-top: 10px;
+    }
+
+.tag {
+    color: white;
+    margin-left: 100px;
+}
+
+.bott-footer {
+    background: #000000;
+    height: 50px;
+    padding: 13px;
+    color: white;
+}
+
+    .bott-footer .ft-link a {
+        color: white;
+    }
+
+    .bott-footer a {
+        color: white;
+    }
+
+        .bott-footer a:hover {
+            color: dodgerblue;
+            text-decoration: none;
+        }

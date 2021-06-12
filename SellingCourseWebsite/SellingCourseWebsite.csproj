@@ -15,8 +15,4 @@
     <ProjectReference Include="..\SellingCourseWebsite.DAL\SellingCourseWebsite.DAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\image\" />
-  </ItemGroup>
-
 </Project>
