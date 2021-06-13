@@ -1,6 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width" />
     <link type="text/css" rel="stylesheet" href="~/css/client.css" />
@@ -10,7 +11,7 @@
 </head>
 <body>
     <!--HEADER-->
-    <div class="header-top">
+    <div id="header-top">
         <div class="row">
             <div class="col-md-6 left-header">
                 <ul>
@@ -28,8 +29,8 @@
                 <div class="header-link">
                     <a href="#" class="hlink">Youtube Channel</a>
                     <a href="#" class="hlink">Knowlegde Base</a>
-                    <a href="#" class="hlink">Login</a>
-                    <a href="#" class="hlink">Register</a>
+                    <a href="@Url.Action("Login", "Authenticate")" class="hlink">Login</a>
+                    <a href="@Url.Action("Register", "Authenticate")" class="hlink">Register</a>
                 </div>
 
             </div>
